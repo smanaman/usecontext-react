@@ -1,0 +1,53 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 15px;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+h2{
+    color: white;
+}
+.menu {
+    display: flex;
+}
+.menu a:hover {
+    background: #575757;
+}
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.menu-toggle div {
+    width: 30px;
+    height: 4px;
+    background: white;
+    margin: 4px;
+}
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #333;
+    }
+    .menu a {
+        text-align: center;
+        padding: 15px;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .menu.active {
+        display: flex;
+    }
+}
